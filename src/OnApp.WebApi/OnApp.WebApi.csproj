@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.8" />
+		<PackageReference Include="NetCore.AutoRegisterDi" Version="2.1.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.5.0" />
+	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Global\Global.csproj" />
+    <ProjectReference Include="..\libs\OnApp.BizLayer\OnApp.BizLayer.csproj" />
+    <ProjectReference Include="..\libs\OnApp.DataLayer.PgSql\OnApp.DataLayer.PgSql.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="OnApp.WebApi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
